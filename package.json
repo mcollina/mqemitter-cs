@@ -29,13 +29,11 @@
     "tape": "^4.5.1"
   },
   "dependencies": {
-    "end-of-stream": "^1.1.0",
     "inherits": "^2.0.1",
     "mqstreams": "^1.0.0",
     "msgpack-lite": "^0.1.20",
-    "net-object-stream": "^2.0.0",
     "pump": "^1.0.1",
-    "readable-steam": "^2.0.0",
+    "readable-stream": "^2.0.0",
     "tentacoli": "^0.5.0"
   }
 }
