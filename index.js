@@ -197,12 +197,6 @@ function server (instance) {
         return reply(new Error('wrong publish format'))
       }
       instance.emit(req.message, reply)
-    } else if (req.cmd === 'publishStream') {
-      reply(null, {
-        streams: {
-          messages: instance.writable()
-        }
-      })
     } else {
       reply(new Error('cmd not found'))
     }

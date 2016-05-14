@@ -59,4 +59,30 @@ server.listen(0, function (err) {
     },
     test: test
   })
+
+  test('20 publishes', function (t) {
+    var client = cs.client(net.connect(server.address()))
+    var count = -1
+    var max = 20
+    var received = 0
+
+    client.on('hello', onMessage, function deliver (err) {
+      t.error(err)
+
+      if (count++ >= max) {
+        return
+      }
+
+      client.emit({ topic: 'hello', msg: count }, deliver)
+    })
+
+    function onMessage (msg, cb) {
+      t.equal(msg.msg, received++)
+      cb()
+      if (msg.msg === max) {
+        client.close()
+        t.end()
+      }
+    }
+  })
 })
