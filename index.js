@@ -22,6 +22,8 @@ var pump = require('pump')
 var msgpack = require('msgpack-lite')
 var Writable = require('readable-stream').Writable
 var inherits = require('inherits')
+// we cannot use array.find because it is not in node v0.12
+var find = require('lodash.find')
 
 function Client (stream, opts) {
   if (!(this instanceof Client)) {
@@ -151,7 +153,7 @@ Client.prototype.removeListener = function (topic, onMessage, done) {
   var streams = this._subscriptions.get(topic)
   if (!streams) { return done() }
 
-  var dest = streams.find(isDest)
+  var dest = find(streams, isDest)
 
   if (dest) {
     streams = streams.filter(isDest)

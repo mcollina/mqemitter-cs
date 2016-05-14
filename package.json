@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "inherits": "^2.0.1",
+    "lodash.find": "^4.4.0",
     "mqstreams": "^1.0.0",
     "msgpack-lite": "^0.1.20",
     "pump": "^1.0.1",
