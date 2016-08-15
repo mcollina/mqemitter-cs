@@ -1,6 +1,6 @@
 {
   "name": "mqemitter-cs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Expose a MQEmitter via a simple client/server protocol",
   "main": "index.js",
   "scripts": {
