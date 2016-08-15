@@ -5,12 +5,12 @@ Expose a [MQEmitter](http://github.com/mcollina/mqemitter) via a simple client/s
 See [MQEmitter](http://github.com/mcollina/mqemitter) for the actual
 API.
 
-[![js-standard-style](https://raw.githubusercontent.com/feross/standard/master/badge.png)](https://github.com/feross/standard)
+[![js-standard-style](https://raw.githubusercontent.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
 ## Install
 
 ```bash
-$ npm install mqemitter-redis --save
+$ npm install mqemitter-cs --save
 ```
 
 ## Example
